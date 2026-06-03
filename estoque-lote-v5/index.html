@@ -30,6 +30,11 @@
   .carousel { display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:6px; border-radius:8px; }
   .carousel img { width:88%; flex:0 0 88%; aspect-ratio:1/1; border-radius:8px; scroll-snap-align:center; object-fit:cover; }
   .swipe-hint { font-size:11px; color:rgba(174,145,139,.7); text-align:center; margin-top:8px; letter-spacing:.08em; }
+  .btn { display:block; width:100%; text-align:center; padding:16px; margin-top:12px; border-radius:10px; font-family:'Montserrat'; font-size:16px; font-weight:600; text-decoration:none; letter-spacing:.02em; transition:opacity .2s; }
+  .btn:active { opacity:.7; }
+  .btn.approve { background:var(--gold); color:#0A0808; }
+  .btn.alter { background:transparent; color:var(--gold); border:1px solid var(--gold); }
+  .btn.reject { background:transparent; color:var(--rose); border:1px solid rgba(174,145,139,.5); }
   footer { text-align:center; margin-top:54px; font-size:11px; color:rgba(174,145,139,0.55); letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
@@ -105,6 +110,14 @@
       <p class="cap">Quando marido e mulher são sócios, o regime de bens decide quem responde pelas dívidas e o destino da empresa em um divórcio ou na sucessão.</p>
     </div>
   </div>
+
+  <div class="section-title">Sua decisão <span>a resposta chega direto ao escritório</span></div>
+  <div class="grid"><div class="card" style="text-align:center">
+    <p class="cap" style="margin:0 0 8px">Toque na opção desejada — ou responda pelo WhatsApp.</p>
+    <a class="btn approve" href="https://wa.me/5511924892244?text=Aprovo%20o%20lote%20de%20conte%C3%BAdo%20do%20Instagram%20%E2%9C%85">✅ Aprovar tudo</a>
+    <a class="btn alter" href="https://wa.me/5511924892244?text=Sobre%20o%20lote%20do%20Instagram%2C%20gostaria%20de%20ajustar%3A%20">✏️ Pedir alteração</a>
+    <a class="btn reject" href="https://wa.me/5511924892244?text=Sobre%20o%20lote%20do%20Instagram%3A%20prefiro%20n%C3%A3o%20publicar%20por%20enquanto.">❌ Reprovar</a>
+  </div></div>
 
   <footer>Material privado · Carlesso &amp; Araujo Advogados</footer>
 </body>
