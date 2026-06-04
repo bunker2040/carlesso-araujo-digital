@@ -159,18 +159,27 @@
       });
     });
 
-    function enviarRespostas() {
+    async function enviarRespostas() {
+      const btn = document.querySelector('.send-btn');
       const blocks = [...document.querySelectorAll('.decide')];
-      const lines = ['Dra. Aline — minhas respostas sobre o lote de conteúdo do Instagram:', ''];
-      blocks.forEach(b => {
+      const respostas = blocks.map(b => {
         const sel = b.querySelector('input[type=radio]:checked');
-        const val = sel ? sel.value : '—';
-        const note = b.querySelector('.note').value.trim();
-        const icon = val === 'Aprovar' ? '✅' : val === 'Ajustar' ? '✏️' : '❌';
-        lines.push(icon + ' ' + b.dataset.label + ': ' + val + (note ? ' — ' + note : ''));
+        return { peca: b.dataset.label, decisao: sel ? sel.value : '—', obs: b.querySelector('.note').value.trim() };
       });
-      const url = 'https://wa.me/5511924892244?text=' + encodeURIComponent(lines.join('\n'));
-      window.location.href = url;
+      btn.disabled = true; btn.textContent = 'Enviando…';
+      try {
+        await fetch('https://wa.alinecarlessoadvogada.com.br/aprovacao-aline', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lote: 'v5', respostas })
+        });
+        document.querySelector('.sendbar .inner').innerHTML =
+          '<div style="text-align:center;padding:12px;color:var(--gold);font-family:Cinzel,serif;font-size:19px">✓ Respostas enviadas!</div>' +
+          '<div class="hint">obrigado, Dra. Aline — o escritório já recebeu suas decisões</div>';
+      } catch (e) {
+        btn.disabled = false; btn.textContent = 'Enviar minhas respostas ▸';
+        alert('Não consegui enviar agora. Tente novamente em instantes, por favor.');
+      }
     }
   </script>
 </body>
