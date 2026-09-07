@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lote v8 — revisão antes de publicar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --navy:#0B1B3A; --navy2:#071228; --gold:#C9A227; --gold2:#E3C463; --bone:#EDE7DC; --muted:#93A2C0; --red:#E2705F; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--navy2);color:var(--bone);font-family:'Inter',sans-serif;padding:26px 16px 80px;}
+  .wrap{max-width:480px;margin:0 auto;}
+  header{text-align:center;margin-bottom:26px;}
+  header .brand{font-family:'Fraunces',serif;color:var(--gold);font-size:18px;letter-spacing:.28em;text-transform:uppercase;}
+  header h1{font-family:'Fraunces',serif;font-size:26px;font-weight:400;margin-top:12px;line-height:1.25;}
+  header .meta{font-size:13px;color:var(--muted);margin-top:10px;}
+
+  .alert{border:1px solid rgba(226,112,95,.45);background:rgba(226,112,95,.08);border-radius:12px;padding:14px 16px;margin:18px 0 8px;font-size:14px;line-height:1.6;}
+  .alert b{color:var(--red);}
+  .ok{border-color:rgba(201,162,39,.4);background:rgba(201,162,39,.07);}
+  .ok b{color:var(--gold2);}
+
+  .section-title{font-family:'Fraunces',serif;font-size:17px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;text-align:center;margin:40px 0 6px;}
+  .section-sub{text-align:center;font-size:12.5px;color:var(--muted);margin-bottom:20px;}
+
+  .card{background:rgba(255,255,255,.025);border:1px solid rgba(201,162,39,.20);border-radius:14px;padding:16px;margin-bottom:26px;}
+  .card h2{font-family:'Fraunces',serif;font-weight:600;font-size:18px;color:var(--gold2);}
+  .card .tag{font-size:12px;color:var(--muted);margin:4px 0 12px;letter-spacing:.04em;}
+  .card video{width:100%;aspect-ratio:9/16;border-radius:9px;background:#000;display:block;}
+  .card video.sq{aspect-ratio:1/1;}
+  .card .single{width:100%;aspect-ratio:1/1;border-radius:9px;display:block;object-fit:cover;}
+  .carousel{display:flex;gap:9px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;border-radius:9px;}
+  .carousel img{width:86%;flex:0 0 86%;aspect-ratio:1/1;border-radius:9px;scroll-snap-align:center;object-fit:cover;}
+  .hint{font-size:11px;color:rgba(147,162,192,.75);text-align:center;margin-top:8px;letter-spacing:.06em;}
+
+  .facts{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;}
+  .pill{font-size:11.5px;padding:5px 11px;border-radius:999px;border:1px solid rgba(147,162,192,.35);color:var(--muted);}
+  .pill.src{border-color:rgba(201,162,39,.5);color:var(--gold2);}
+
+  .legenda{margin-top:14px;padding-top:13px;border-top:1px solid rgba(201,162,39,.16);}
+  .legenda .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+  .legenda p{font-size:13.5px;line-height:1.62;color:var(--bone);margin-bottom:9px;white-space:pre-wrap;}
+  .legenda .tags{font-size:12.5px;color:var(--muted);}
+
+  .flag{margin-top:13px;border-left:3px solid var(--red);background:rgba(226,112,95,.07);padding:11px 13px;border-radius:0 9px 9px 0;font-size:13px;line-height:1.6;}
+  .flag b{color:var(--red);}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px;}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid rgba(147,162,192,.18);}
+  th{color:var(--gold);font-weight:600;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;}
+  td.when{color:var(--gold2);white-space:nowrap;}
+
+  footer{text-align:center;margin-top:44px;font-size:11px;color:rgba(147,162,192,.55);letter-spacing:.18em;text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Carlesso &amp; Araujo</div>
+    <h1>Lote v8 — revisão antes de publicar</h1>
+    <div class="meta">13 de agosto de 2026 · nada foi agendado ainda</div>
+  </header>
+
+  <div class="alert ok">
+    <b>Este lote cobre o buraco de 24 a 29/08.</b> O v7 termina no dia 23 e o post animado só entra no dia 30.
+    Sem estas peças o perfil ficaria 6 dias mudo — foi o silêncio de junho que matou o alcance da última vez.
+  </div>
+  <div class="alert">
+    <b>Nenhum tema se repete.</b> A primeira proposta repetia 4 de 4: ITCMD já saiu 6 vezes nos lotes v4–v6 e
+    “empresa x patrimônio pessoal” saiu 2 vezes no v5. Esta versão foi conferida legenda por legenda contra
+    tudo que já foi publicado.
+  </div>
+
+  <div class="section-title">Carrossel</div>
+  <div class="section-sub">1 peça · 5 slides · ter 25/08</div>
+
+  <div class="card">
+    <h2>1 · Doar sem perder o controle</h2>
+    <div class="tag">Planejamento patrimonial · 5 slides</div>
+    <div class="carousel">
+      <img src="carrossel-clausulas/1.png" alt="slide 1"><img src="carrossel-clausulas/2.png" alt="slide 2"><img src="carrossel-clausulas/3.png" alt="slide 3"><img src="carrossel-clausulas/4.png" alt="slide 4"><img src="carrossel-clausulas/5.png" alt="slide 5">
+    </div>
+    <div class="hint">arraste para o lado →</div>
+    <div class="facts">
+      <span class="pill src">CC art. 1.911</span>
+      <span class="pill src">STJ · o inverso não vale</span>
+      <span class="pill">fonte conferida 13/08</span>
+    </div>
+    <div class="legenda">
+      <div class="lbl">Legenda proposta</div>
+      <p>Planejamento patrimonial: doar não é o mesmo que proteger.
+
+Na doação pura e simples, o bem passa a ser do donatário sem nenhuma trava — pode se comunicar com o cônjuge dele, responder pelas dívidas dele e ser vendido a qualquer momento.
+
+Existem três cláusulas para isso. Incomunicabilidade: o bem não se comunica com o cônjuge do donatário. Impenhorabilidade: não responde pelas dívidas dele. Inalienabilidade: ele não pode vender.
+
+E aqui está o detalhe que quase ninguém observa: a cláusula de inalienabilidade, imposta por ato de liberalidade, já implica impenhorabilidade e incomunicabilidade — é o que diz o art. 1.911 do Código Civil. Mas o Superior Tribunal de Justiça firmou que o contrário não é verdadeiro: pôr apenas impenhorabilidade, ou apenas incomunicabilidade, não gera inalienabilidade. Muita gente doa achando que travou o bem e travou só metade.
+
+As cláusulas precisam estar expressas na escritura. Depois de feita a doação, não dá para acrescentar.
+
+Quer entender quais fazem sentido no seu caso? Fale comigo pelo WhatsApp no link da bio.</p>
+      <div class="tags">#planejamentopatrimonial #doacao #incomunicabilidade #impenhorabilidade #inalienabilidade #sucessao #direitosucessorio #advogadasp</div>
+    </div>
+  </div>
+
+  <div class="section-title">Reels</div>
+  <div class="section-sub">3 peças · qua 26, qui 27 e sex 28/08</div>
+
+  <div class="card">
+    <h2>2 · Sua marca não registrada não é sua</h2>
+    <div class="tag">Direito empresarial · reel M1</div>
+    <video src="reels/reel-M1-marca.mp4?v=3" controls preload="metadata" playsinline></video>
+    <div class="facts">
+      <span class="pill">19,0 s</span>
+      <span class="pill src">Lei 9.279/96, art. 129</span>
+      <span class="pill src">art. 129, §1º</span>
+      <span class="pill">fonte conferida 13/08</span>
+    </div>
+    <div class="legenda">
+      <div class="lbl">Legenda proposta</div>
+      <p>Direito empresarial: você usa a sua marca há dez anos e nunca registrou. Ela não é sua.
+
+O Brasil adota o sistema atributivo: a propriedade da marca se adquire pelo registro validamente expedido, e é o registro que assegura ao titular o uso exclusivo em todo o território nacional. Está no art. 129 da Lei 9.279/96.
+
+Usar antes tem valor, mas menos do que se imagina. Quem, de boa-fé, já usava no país há pelo menos seis meses uma marca idêntica ou semelhante para produto ou serviço igual ou afim tem direito de precedência ao registro (art. 129, §1º). Repare bem: é preferência para registrar — não o direito de continuar usando a marca se outra pessoa registrar antes.
+
+Na prática, o tempo de mercado não substitui o depósito no INPI: usar antes dá preferência, não dá propriedade. E a preferência ainda precisa ser provada.
+
+Quer verificar a situação da sua marca antes que alguém registre? Fale comigo pelo WhatsApp no link da bio.</p>
+      <div class="tags">#marca #propriedadeintelectual #inpi #registrodemarca #direitoempresarial #pme #empreendedorismo #advogadaempresarial</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3 · A assinatura que coloca a sua casa em risco</h2>
+    <div class="tag">Direito empresarial · reel F1</div>
+    <video src="reels/reel-F1-fiador.mp4" controls preload="metadata" playsinline></video>
+    <div class="facts">
+      <span class="pill">16,6 s</span>
+      <span class="pill src">Lei 8.009/90, art. 3º, VII</span>
+      <span class="pill src">STF Tema 295 · RE 1.307.334</span>
+      <span class="pill">fonte conferida 13/08</span>
+    </div>
+    <div class="legenda">
+      <div class="lbl">Legenda proposta</div>
+      <p>Direito empresarial: você assinou como fiador do aluguel da sua própria empresa. A sua casa entrou na conta.
+
+O bem de família é impenhorável — essa é a regra da Lei 8.009/90. Mas a própria lei traz exceções, e uma delas é a obrigação decorrente de fiança concedida em contrato de locação (art. 3º, VII).
+
+E não adianta contar com o argumento de que o imóvel é a moradia da família. O Supremo Tribunal Federal fixou, no Tema 295, que é constitucional a penhora do bem de família pertencente ao fiador de contrato de locação, por ser compatível com o direito à moradia. No RE 1.307.334, o entendimento foi aplicado também à locação comercial.
+
+Ou seja: o empresário que assina como fiador do ponto da empresa pode responder com a casa onde mora a família — mesmo a empresa sendo uma pessoa jurídica separada.
+
+Quer revisar as garantias que você assinou nos contratos da sua empresa? Fale comigo pelo WhatsApp no link da bio.</p>
+      <div class="tags">#bemdefamilia #fiador #locacaocomercial #direitoempresarial #contratos #protecaopatrimonial #pme #advogadaempresarial</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4 · O convite para seguir</h2>
+    <div class="tag">Institucional · reel S1 · sem WhatsApp e sem número</div>
+    <video src="reels/reel-S1-siga.mp4" controls preload="metadata" playsinline></video>
+    <div class="facts">
+      <span class="pill">16,8 s</span>
+      <span class="pill">objetivo: seguidor, não consulta</span>
+    </div>
+    <div class="flag" style="border-left-color:var(--gold);background:rgba(201,162,39,.07);">
+      <b style="color:var(--gold2);">Por que esta peça é diferente.</b> Ela não leva CTA de WhatsApp nem o número —
+      misturar “me siga” com “me chame” enfraquece as duas coisas. O builder foi ajustado para permitir um CTA
+      sem a pill do telefone. É a única peça do lote sem pedido de contato.
+    </div>
+    <div class="legenda">
+      <div class="lbl">Legenda proposta</div>
+      <p>Aqui eu explico, sem juridiquês, o que muda no patrimônio da sua empresa e da sua família. Uma regra por vez.
+
+Nas últimas semanas passaram por aqui: o que o seguro de vida não paga de imposto, o que a Resolução do CNJ mudou no inventário com testamento, o que a reforma tributária realmente exigiu da sua nota fiscal e o que a janela de setembro do Simples Nacional decide sobre o primeiro semestre de 2027.
+
+Para você e sua empresa ficarem sempre atualizados, me siga.</p>
+      <div class="tags">#direitoempresarial #planejamentopatrimonial #advogadaempresarial #advogadasp #reformatributaria #sucessao</div>
+    </div>
+  </div>
+
+  <div class="section-title">Calendário proposto</div>
+  <div class="section-sub">preenche 25 a 28/08 · carrossel 12h30 · reels 20h (BRT)</div>
+
+  <div class="card">
+    <table>
+      <tr><th>Peça</th><th>Quando</th></tr>
+      <tr><td>1 · Cláusulas na doação <span style="color:var(--muted)">(carrossel)</span></td><td class="when">ter 25/08 · 12h30</td></tr>
+      <tr><td>2 · Marca não registrada <span style="color:var(--muted)">(reel)</span></td><td class="when">qua 26/08 · 20h</td></tr>
+      <tr><td>3 · Fiador do aluguel <span style="color:var(--muted)">(reel)</span></td><td class="when">qui 27/08 · 20h</td></tr>
+      <tr><td>4 · Convite para seguir <span style="color:var(--muted)">(reel)</span></td><td class="when">sex 28/08 · 20h</td></tr>
+    </table>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px;line-height:1.6;">
+      Com o v8, a sequência de 13 a 30/08 fica <b>sem nenhum dia mudo dentro da cadência</b> (ter/qua/qui/sex/dom):
+      13, 16, 18, 19, 20, 21, 23, 25, 26, 27, 28 e 30 de agosto.
+      <br><br>
+      <b style="color:var(--red);">O token do Instagram expira por volta de 07/09.</b> Este lote cabe dentro da
+      validade, mas depois de 30/08 não há mais estoque — e a renovação precisa do seu login na Meta.
+    </p>
+  </div>
+
+  <footer>Carlesso &amp; Araujo · uso interno</footer>
+</div>
+</body>
+</html>

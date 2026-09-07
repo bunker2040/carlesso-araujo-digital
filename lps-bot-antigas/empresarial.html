@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advogado Empresarial SP | Carlesso & Araujo Advogados</title>
+<meta name="description" content="Escritório especializado em Direito Empresarial em São Paulo. Contratos, sócios, cobranças e compliance. Atendimento imediato pelo WhatsApp.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Seu Negócio Tem um Problema Jurídico? Resolva Agora.">
+<meta property="og:description" content="Escritório Carlesso & Araujo — Direito Empresarial com atendimento personalizado. Fale com a Dra. Aline Carlesso.">
+<meta property="og:type" content="website">
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --azul: #1a3a5c;
+    --azul-claro: #2563a8;
+    --dourado: #c8a84b;
+    --cinza-claro: #f4f6f8;
+    --texto: #2d2d2d;
+    --verde-wa: #25D366;
+  }
+  body { font-family: 'Georgia', serif; color: var(--texto); line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+  /* HEADER */
+  header {
+    background: var(--azul);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .logo {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  header .logo span { color: var(--dourado); }
+  header .tel {
+    color: white;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--azul) 0%, #0f2540 100%);
+    color: white;
+    padding: 60px 20px 50px;
+    text-align: center;
+  }
+  .hero .badge {
+    display: inline-block;
+    background: var(--dourado);
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 span { color: var(--dourado); }
+  .hero p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    font-family: Arial, sans-serif;
+  }
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--verde-wa);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+  .btn-wa svg { width: 24px; height: 24px; fill: white; flex-shrink: 0; }
+  .hero .sub-cta {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    font-family: Arial, sans-serif;
+  }
+
+  /* SOCIAL PROOF BAR */
+  .proof-bar {
+    background: var(--dourado);
+    padding: 12px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--azul);
+    letter-spacing: 0.3px;
+  }
+  .proof-bar .stars { color: #fff; margin-right: 6px; }
+
+  /* PROBLEMA */
+  .problemas {
+    background: white;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .problemas h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: var(--azul);
+    margin-bottom: 10px;
+  }
+  .problemas .sub {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+  .prob-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .prob-card {
+    border: 1px solid #e0e7ef;
+    border-left: 4px solid var(--azul-claro);
+    padding: 20px;
+    border-radius: 6px;
+    background: var(--cinza-claro);
+    font-family: Arial, sans-serif;
+  }
+  .prob-card .icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .prob-card strong { display: block; color: var(--azul); margin-bottom: 6px; font-size: 0.95rem; }
+  .prob-card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
+
+  /* SOLUCAO */
+  .solucao {
+    background: var(--cinza-claro);
+    padding: 60px 20px;
+  }
+  .solucao-inner { max-width: 900px; margin: 0 auto; }
+  .solucao h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    color: var(--azul);
+    margin-bottom: 10px;
+  }
+  .solucao .sub {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+  }
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  .area-item {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+    color: var(--azul);
+    font-weight: bold;
+    border: 1px solid #dce6f0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .area-item .ico { font-size: 1.4rem; display: block; margin-bottom: 6px; }
+
+  /* QUEM SOMOS */
+  .quem {
+    background: white;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+  }
+  @media (max-width: 640px) { .quem { grid-template-columns: 1fr; text-align: center; } }
+  .quem-foto {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+    border-radius: 12px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .quem h2 { color: var(--azul); font-size: 1.5rem; margin-bottom: 12px; }
+  .quem p { font-family: Arial, sans-serif; color: #555; font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; }
+  .quem .stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .quem .stat { text-align: center; }
+  .quem .stat strong { display: block; font-size: 1.6rem; color: var(--azul); }
+  .quem .stat span { font-size: 0.8rem; font-family: Arial, sans-serif; color: #777; }
+
+  /* DEPOIMENTOS */
+  .depos {
+    background: var(--azul);
+    padding: 60px 20px;
+    color: white;
+  }
+  .depos h2 {
+    text-align: center;
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+    margin-bottom: 8px;
+  }
+  .depos .sub {
+    text-align: center;
+    opacity: 0.8;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+  .depos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .depo {
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+  .depo .stars { color: var(--dourado); font-size: 1rem; margin-bottom: 10px; }
+  .depo p { font-size: 0.88rem; opacity: 0.9; line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+  .depo .autor { font-size: 0.82rem; opacity: 0.7; font-weight: bold; }
+
+  /* FAQ */
+  .faq {
+    background: white;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq h2 { text-align: center; color: var(--azul); font-size: clamp(1.3rem, 4vw, 1.7rem); margin-bottom: 40px; }
+  .faq-item { border-bottom: 1px solid #e8edf3; padding: 20px 0; }
+  .faq-item summary {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: var(--azul);
+    font-size: 0.95rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.3rem; color: var(--azul-claro); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #555; margin-top: 12px; line-height: 1.7; }
+
+  /* CTA FINAL */
+  .cta-final {
+    background: linear-gradient(135deg, #0f2540 0%, var(--azul) 100%);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+  }
+  .cta-final h2 { font-size: clamp(1.4rem, 4vw, 2rem); margin-bottom: 14px; }
+  .cta-final h2 span { color: var(--dourado); }
+  .cta-final p { font-family: Arial, sans-serif; opacity: 0.85; max-width: 500px; margin: 0 auto 32px; font-size: 0.95rem; }
+  .cta-final .btn-wa { font-size: 1.15rem; padding: 18px 36px; }
+
+  /* FOOTER */
+  footer {
+    background: #0a1a2e;
+    color: rgba(255,255,255,0.6);
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  footer a { color: rgba(255,255,255,0.7); }
+
+  /* WHATSAPP FLUTUANTE */
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--verde-wa);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.5);
+    z-index: 999;
+    animation: pulse 2.5s infinite;
+  }
+  .wa-float svg { width: 32px; height: 32px; fill: white; }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 4px 16px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 4px 24px rgba(37,211,102,0.75), 0 0 0 8px rgba(37,211,102,0.1); }
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .hero { padding: 50px 16px 40px; }
+    .btn-wa { font-size: 1rem; padding: 14px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Carlesso <span>&</span> Araujo<br><small style="font-weight:normal;font-size:0.75rem;opacity:0.8">Advogados</small></div>
+  <div class="tel">📱 Atendimento pelo WhatsApp</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">⚖️ Direito Empresarial</div>
+  <h1>O seu negócio precisa de um advogado que <span>entende de empresa</span></h1>
+  <p>Contratos, conflitos societários, cobranças, compliance — atendemos toda demanda jurídica da sua empresa. Atendimento imediato pelo WhatsApp.</p>
+  <a href="https://wa.me/5511924892244?text=%5Bgads-emp%5D+Ol%C3%A1%2C+vim+pelo+site+e+preciso+de+assessoria+jur%C3%ADdica+empresarial." class="btn-wa" id="cta-hero">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Falar com a Dra. Aline agora
+  </a>
+  <p class="sub-cta">⚡ Resposta imediata pelo WhatsApp · Atendimento 24h</p>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <span class="stars">★★★★★</span> Nota máxima no Google · Fundado em 2015 · Atendimento em todo o Brasil
+</div>
+
+<!-- PROBLEMAS -->
+<section style="background:white; padding: 60px 20px;">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 style="text-align:center; font-size:clamp(1.3rem,4vw,1.8rem); color:var(--azul); margin-bottom:10px;">Você está passando por alguma dessas situações?</h2>
+    <p style="text-align:center; font-family:Arial,sans-serif; color:#666; margin-bottom:40px; font-size:0.95rem;">Se sim, você precisa de orientação jurídica especializada — quanto antes, melhor.</p>
+    <div class="prob-grid">
+      <div class="prob-card">
+        <div class="icon">⚠️</div>
+        <strong>Conflito entre sócios</strong>
+        <p>Desentendimentos que travam a empresa, saída de sócio sem acordo, risco de dissolução.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon">📄</div>
+        <strong>Contrato problemático</strong>
+        <p>Contrato que precisa ser revisado antes de assinar, cláusula abusiva ou descumprimento.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon">💸</div>
+        <strong>Cliente ou fornecedor inadimplente</strong>
+        <p>Dívida que não é paga, boleto ignorado, necessidade de cobrança judicial ou extrajudicial.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon">🏢</div>
+        <strong>Abertura ou alteração de empresa</strong>
+        <p>Abertura de LTDA ou S.A., mudança de contrato social, transformação societária.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon">📋</div>
+        <strong>Compliance e regulatório</strong>
+        <p>Adequação à LGPD, ESG, políticas internas, prevenção a riscos jurídicos corporativos.</p>
+      </div>
+      <div class="prob-card">
+        <div class="icon">🔑</div>
+        <strong>Aluguel comercial</strong>
+        <p>Revisão de contrato de locação, despejo, renovatória ou negociação com o locador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCAO -->
+<section class="solucao">
+  <div class="solucao-inner">
+    <h2>Atuamos em todas as áreas do direito empresarial</h2>
+    <p class="sub">E também em Direito Civil, Família, Sucessório, Consumidor e muito mais.</p>
+    <div class="areas-grid">
+      <div class="area-item"><span class="ico">🤝</span>Direito Societário</div>
+      <div class="area-item"><span class="ico">📜</span>Contratos</div>
+      <div class="area-item"><span class="ico">💰</span>Cobranças</div>
+      <div class="area-item"><span class="ico">🔒</span>Compliance / LGPD</div>
+      <div class="area-item"><span class="ico">🏛️</span>Abertura de Empresa</div>
+      <div class="area-item"><span class="ico">🏠</span>Aluguel Comercial</div>
+      <div class="area-item"><span class="ico">⚖️</span>Direito Civil</div>
+      <div class="area-item"><span class="ico">👨‍👩‍👧</span>Direito de Família</div>
+      <div class="area-item"><span class="ico">📦</span>Propriedade Intelectual</div>
+      <div class="area-item"><span class="ico">🧾</span>MEI e Autônomos</div>
+      <div class="area-item"><span class="ico">🗂️</span>Inventário</div>
+      <div class="area-item"><span class="ico">⚡</span>Penal Empresarial</div>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://wa.me/5511924892244?text=%5Bgads-emp%5D+Ol%C3%A1%2C+preciso+de+assessoria+jur%C3%ADdica+empresarial." class="btn-wa" style="font-size:1rem;">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Falar com o escritório agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section style="background:white; padding:60px 20px;">
+  <div style="max-width:900px; margin:0 auto; display:grid; grid-template-columns:minmax(140px,200px) 1fr; gap:40px; align-items:center;">
+    <div style="background:linear-gradient(135deg,var(--azul) 0%,var(--azul-claro) 100%); border-radius:12px; aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:4rem; color:white;">⚖️</div>
+    <div>
+      <h2 style="color:var(--azul); font-size:1.5rem; margin-bottom:12px;">Dra. Aline Carlesso</h2>
+      <p style="font-family:Arial,sans-serif; color:#555; font-size:0.92rem; line-height:1.7; margin-bottom:10px;">Advogada fundadora do escritório Carlesso &amp; Araujo, com mais de 10 anos de experiência em Direito Empresarial. Atende pessoalmente cada cliente, com foco em soluções práticas e resultados.</p>
+      <p style="font-family:Arial,sans-serif; color:#555; font-size:0.92rem; line-height:1.7;">O escritório atende pessoas físicas e jurídicas em todo o Brasil, com avaliações nota máxima no Google e histórico comprovado de casos resolvidos.</p>
+      <div style="display:flex; gap:24px; margin-top:20px; flex-wrap:wrap;">
+        <div style="text-align:center;"><strong style="display:block;font-size:1.6rem;color:var(--azul);">10+</strong><span style="font-size:0.8rem;font-family:Arial,sans-serif;color:#777;">anos de atuação</span></div>
+        <div style="text-align:center;"><strong style="display:block;font-size:1.6rem;color:var(--azul);">★ 5.0</strong><span style="font-size:0.8rem;font-family:Arial,sans-serif;color:#777;">no Google</span></div>
+        <div style="text-align:center;"><strong style="display:block;font-size:1.6rem;color:var(--azul);">🇧🇷</strong><span style="font-size:0.8rem;font-family:Arial,sans-serif;color:#777;">todo o Brasil</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2>Perguntas frequentes</h2>
+  <details class="faq-item">
+    <summary>Como funciona o primeiro contato?</summary>
+    <p>Você envia uma mensagem pelo WhatsApp, explica brevemente sua situação e a nossa equipe registra o seu caso. A Dra. Aline analisa pessoalmente e entra em contato para orientá-lo sobre os próximos passos.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Atendem empresas de fora de São Paulo?</summary>
+    <p>Sim. O escritório atende em todo o Brasil. A maioria dos atendimentos é realizada de forma remota, com toda a segurança e formalidade necessárias.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Como são definidos os honorários?</summary>
+    <p>Os honorários são definidos após a análise do caso, de acordo com a complexidade e tipo de serviço. Não há taxa de cadastro nem valor fixo para consulta — tudo é apresentado com transparência.</p>
+  </details>
+  <details class="faq-item">
+    <summary>O escritório atende apenas empresas?</summary>
+    <p>Não. Além do Direito Empresarial, atendemos pessoas físicas em diversas áreas: Direito Civil, Família, Inventário, Consumidor, Propriedade Intelectual e mais.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Quanto tempo leva para ter uma resposta?</summary>
+    <p>O contato inicial pelo WhatsApp é respondido com agilidade. A Dra. Aline analisa cada caso pessoalmente e entra em contato assim que conclui a avaliação.</p>
+  </details>
+</section>
+
+<!-- DEPOIMENTOS — posicionados antes do CTA para maximizar conversão -->
+<section class="depos">
+  <h2>O que nossos clientes dizem</h2>
+  <p class="sub">Avaliações reais de clientes atendidos — nota máxima no Google</p>
+  <div class="depos-grid">
+    <div class="depo">
+      <div class="stars">★★★★★</div>
+      <p>"A Dra. Aline identificou uma cláusula que me faria pagar multa de R$180 mil. Economizei tudo isso antes de assinar. Atendimento rápido e direto ao ponto."</p>
+      <div class="autor">R.M. — Empresário, São Paulo</div>
+    </div>
+    <div class="depo">
+      <div class="stars">★★★★★</div>
+      <p>"Meu sócio tentou me tirar da empresa. Em 60 dias o problema estava resolvido juridicamente, sem desgaste desnecessário. Recomendo sem hesitar."</p>
+      <div class="autor">F.S. — Diretora Comercial</div>
+    </div>
+    <div class="depo">
+      <div class="stars">★★★★★</div>
+      <p>"Expliquei meu caso pelo WhatsApp às 22h. No dia seguinte de manhã já tinha retorno da Dra. Aline com os próximos passos. Atendimento de alto nível."</p>
+      <div class="autor">L.A. — Sócio-Gerente</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Não deixe o problema <span>crescer</span></h2>
+  <p>Questões jurídicas empresariais têm prazo. Quanto antes você buscar orientação, mais opções você terá.</p>
+  <p style="font-family:Arial,sans-serif; font-size:0.9rem; opacity:0.75; max-width:480px; margin:0 auto 28px;">💡 <strong>Análise Documental Prévia:</strong> envie seus contratos ou documentos pelo WhatsApp — a Dra. Aline identifica os 3 maiores riscos antes mesmo da reunião.</p>
+  <a href="https://wa.me/5511924892244?text=%5Bgads-emp%5D+Ol%C3%A1%2C+preciso+de+orientacao+juridica+empresarial." class="btn-wa">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Falar com a Dra. Aline pelo WhatsApp
+  </a>
+  <p style="margin-top:12px; font-size:0.8rem; opacity:0.65; font-family:Arial,sans-serif;">Atendimento confidencial · A Dra. Aline retorna em até 2h úteis</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong style="color:rgba(255,255,255,0.85)">Carlesso &amp; Araujo Advogados</strong></p>
+  <p>Fundado em 2015 · Atendimento em todo o Brasil</p>
+  <p style="margin-top:8px;">Este site tem caráter informativo e não constitui parecer ou consultoria jurídica.</p>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5511924892244?text=%5Bgads-emp%5D+Ol%C3%A1%2C+preciso+de+ajuda+juridica." class="wa-float" title="Falar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- GCLID + KEYWORD TRACKER — Traffic Chief recommendation -->
+<script>
+(function() {
+  try {
+    var p = new URLSearchParams(window.location.search);
+    var gclid = p.get('gclid');
+    var kw = p.get('keyword') || p.get('utm_term') || p.get('utm_keyword');
+    var src = p.get('utm_source');
+    var cmp = p.get('utm_campaign');
+    if (gclid) localStorage.setItem('ca_gclid', gclid);
+    if (kw)    localStorage.setItem('ca_kw', kw);
+    if (src)   localStorage.setItem('ca_src', src);
+    if (cmp)   localStorage.setItem('ca_cmp', cmp);
+
+    // Appende parâmetros de rastreamento no texto pré-preenchido do WhatsApp
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        try {
+          var url = new URL(a.href);
+          var txt = url.searchParams.get('text') || '';
+          var g = localStorage.getItem('ca_gclid');
+          var k = localStorage.getItem('ca_kw');
+          if (g) txt += ' [gclid:' + g + ']';
+          if (k) txt += ' [kw:' + k + ']';
+          url.searchParams.set('text', txt);
+          a.href = url.toString();
+        } catch(e) {}
+      });
+    });
+  } catch(e) {}
+})();
+</script>
+
+<!-- Google Ads Tag — SUBSTITUIR AW-XXXXXXXXX pelo Conversion ID real no Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-XXXXXXXXX');
+  // Disparar conversão ao clicar no WhatsApp
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        gtag('event', 'conversion', { send_to: 'AW-XXXXXXXXX/YYYYYYYYYY' });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

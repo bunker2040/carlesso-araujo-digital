@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Conteúdo para apreciação · Dra. Aline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --marble-dark:#0A0808; --gold:#CD9443; --rose:#AE918B; --bone:#EAE3D9; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--marble-dark); color:var(--bone); font-family:'Montserrat',sans-serif; min-height:100vh; padding:26px 16px 120px; }
+  header { text-align:center; margin-bottom:30px; }
+  header .brand { font-family:'Cinzel',serif; color:var(--gold); font-size:19px; letter-spacing:.3em; text-transform:uppercase; }
+  header h1 { font-family:'Cinzel',serif; font-size:24px; font-weight:400; margin-top:12px; color:var(--bone); }
+  header p { font-size:14px; color:var(--rose); margin-top:12px; line-height:1.6; max-width:430px; margin-left:auto; margin-right:auto; }
+  .section-title { font-family:'Cinzel',serif; font-size:16px; font-weight:500; color:var(--gold); letter-spacing:.18em; text-transform:uppercase; text-align:center; margin:42px 0 20px; }
+  .section-title span { display:block; font-family:'Montserrat'; font-size:12px; font-weight:300; color:var(--rose); letter-spacing:.06em; text-transform:none; margin-top:6px; }
+  .grid { display:grid; grid-template-columns:1fr; gap:30px; max-width:430px; margin:0 auto; }
+  .card { background:rgba(255,255,255,0.02); border:1px solid rgba(205,148,67,0.18); border-radius:14px; padding:16px; }
+  .card h2 { font-family:'Cinzel',serif; font-weight:500; font-size:17px; color:var(--gold); margin-bottom:4px; }
+  .card .tag { font-size:12px; color:var(--rose); margin-bottom:12px; font-style:italic; letter-spacing:.04em; }
+  .card video, .card .single-img { width:100%; aspect-ratio:9/16; border-radius:8px; background:#000; display:block; object-fit:cover; }
+  .card .single-img.square { aspect-ratio:1/1; }
+  .card .cap { font-size:13px; color:var(--bone); margin-top:13px; line-height:1.55; }
+  .card .cap strong { color:var(--gold); font-weight:600; }
+  .carousel { display:flex; gap:10px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:6px; border-radius:8px; }
+  .carousel img { width:88%; flex:0 0 88%; aspect-ratio:1/1; border-radius:8px; scroll-snap-align:center; object-fit:cover; }
+  .swipe-hint { font-size:11px; color:rgba(174,145,139,.7); text-align:center; margin-top:8px; letter-spacing:.08em; }
+  /* decisão por peça */
+  .decide { margin-top:14px; padding-top:14px; border-top:1px solid rgba(205,148,67,0.15); }
+  .opts { display:flex; gap:8px; }
+  .opts label { flex:1; text-align:center; font-size:13px; font-weight:500; padding:9px 4px; border-radius:8px; border:1px solid rgba(174,145,139,0.3); color:var(--rose); cursor:pointer; user-select:none; transition:.15s; }
+  .opts input { display:none; }
+  .opts label.ap.on { background:var(--gold); color:#0A0808; border-color:var(--gold); }
+  .opts label.aj.on { background:rgba(205,148,67,0.18); color:var(--gold); border-color:var(--gold); }
+  .opts label.re.on { background:rgba(174,145,139,0.18); color:#e6b3ad; border-color:rgba(230,150,140,0.6); }
+  .note { width:100%; margin-top:9px; padding:10px 12px; background:rgba(0,0,0,0.3); border:1px solid rgba(174,145,139,0.25); border-radius:8px; color:var(--bone); font-family:'Montserrat'; font-size:13px; }
+  .note::placeholder { color:rgba(174,145,139,0.5); }
+  /* barra fixa de envio */
+  .sendbar { position:fixed; left:0; right:0; bottom:0; background:linear-gradient(to top, #0A0808 70%, transparent); padding:16px; z-index:50; }
+  .sendbar .inner { max-width:430px; margin:0 auto; }
+  .send-btn { display:block; width:100%; text-align:center; padding:17px; border:none; border-radius:12px; background:var(--gold); color:#0A0808; font-family:'Montserrat'; font-size:16px; font-weight:600; letter-spacing:.02em; cursor:pointer; box-shadow:0 6px 24px rgba(0,0,0,0.5); }
+  .send-btn:active { opacity:.85; }
+  .sendbar .hint { text-align:center; font-size:11px; color:rgba(174,145,139,0.7); margin-top:8px; }
+  footer { text-align:center; margin-top:40px; font-size:11px; color:rgba(174,145,139,0.55); letter-spacing:.2em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand">Carlesso &amp; Araujo</div>
+    <h1>Conteúdo para sua apreciação</h1>
+    <p>Dra. Aline, este é o próximo lote para o Instagram — 4 reels, 2 carrosséis e 2 posts, sobre temas atuais de Direito Empresarial e Patrimonial.<br><br>Em cada peça, marque <strong style="color:var(--gold)">Aprovar</strong>, <strong style="color:var(--gold)">Ajustar</strong> ou <strong style="color:var(--gold)">Reprovar</strong> (e escreva a observação, se quiser). No fim, toque em <strong style="color:var(--gold)">Enviar minhas respostas</strong>.</p>
+  </header>
+
+  <div class="section-title">Reels <span>toque para reproduzir com som</span></div>
+  <div class="grid">
+    <div class="card">
+      <h2>1 · STJ blinda o sócio</h2>
+      <div class="tag">Empresarial · STJ Tema 1.210</div>
+      <video src="reels/reel-1-stj-socio.mp4" controls playsinline preload="metadata"></video>
+      <p class="cap">Empresa sem bens já não significa sócio pagando a conta. Para atingir o patrimônio pessoal é preciso <strong>provar abuso</strong>.</p>
+    </div>
+    <div class="card">
+      <h2>2 · Quando holding NÃO vale</h2>
+      <div class="tag">Patrimonial · Migalhas / LC 227/2026</div>
+      <video src="reels/reel-2-holding-nao-vale.mp4" controls playsinline preload="metadata"></video>
+      <p class="cap">Nem toda família precisa de holding. Sem patrimônio relevante, vira <strong>custo fixo</strong>. Antes da estrutura, o diagnóstico.</p>
+    </div>
+    <div class="card">
+      <h2>3 · Imposto na hora da venda</h2>
+      <div class="tag">Empresarial · LC 214/2025 · IBS e CBS</div>
+      <video src="reels/reel-3-split-payment.mp4" controls playsinline preload="metadata"></video>
+      <p class="cap">O <strong>split payment</strong>: IBS e CBS recolhidos no momento do pagamento. Testes em 2026, regra plena até 2033.</p>
+    </div>
+    <div class="card">
+      <h2>4 · Empresa = patrimônio</h2>
+      <div class="tag">Patrimonial · Código Civil, art. 50</div>
+      <video src="reels/reel-4-empresa-patrimonio.mp4" controls playsinline preload="metadata"></video>
+      <p class="cap">Sem separação jurídica, a dívida da empresa alcança a casa, o carro e a reserva. <strong>Blindar é organizar antes.</strong></p>
+    </div>
+  </div>
+
+  <div class="section-title">Carrosséis <span>deslize lateralmente os 5 slides</span></div>
+  <div class="grid">
+    <div class="card">
+      <h2>ITCMD em 2026 — sem pânico</h2>
+      <div class="tag">Patrimonial · checklist em 5 slides</div>
+      <div class="carousel">
+        <img src="carrossel-c5-itcmd/1.png" alt=""><img src="carrossel-c5-itcmd/2.png" alt=""><img src="carrossel-c5-itcmd/3.png" alt=""><img src="carrossel-c5-itcmd/4.png" alt=""><img src="carrossel-c5-itcmd/5.png" alt="">
+      </div>
+      <div class="swipe-hint">← deslize →</div>
+      <p class="cap">A reforma do ITCMD já passou. O que dá para decidir ainda em 2026: mapear o patrimônio, avaliar doações com calma e revisar holding, testamento e regime de bens.</p>
+    </div>
+    <div class="card">
+      <h2>Contratos que viram passivo</h2>
+      <div class="tag">Empresarial · 5 slides</div>
+      <div class="carousel">
+        <img src="carrossel-c6-contratos/1.png" alt=""><img src="carrossel-c6-contratos/2.png" alt=""><img src="carrossel-c6-contratos/3.png" alt=""><img src="carrossel-c6-contratos/4.png" alt=""><img src="carrossel-c6-contratos/5.png" alt="">
+      </div>
+      <div class="swipe-hint">← deslize →</div>
+      <p class="cap">O contrato que mais processa não é o social — é o do dia a dia: prestação de serviços sem escopo, fornecimento sem reajuste e distrato no boca a boca.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Posts</div>
+  <div class="grid">
+    <div class="card">
+      <h2>Doações fracionadas</h2>
+      <div class="tag">Patrimonial · LC 227/2026</div>
+      <img class="single-img square" src="posts/p7-doacoes-fracionadas.png" alt="">
+      <p class="cap">Dividir a doação em vários anos para pagar menos imposto deixou de funcionar: a LC 227/2026 passou a somar as doações ao mesmo donatário.</p>
+    </div>
+    <div class="card">
+      <h2>Sociedade entre casal</h2>
+      <div class="tag">Empresarial · regime de bens</div>
+      <img class="single-img square" src="posts/p8-sociedade-casal.png" alt="">
+      <p class="cap">Quando marido e mulher são sócios, o regime de bens decide quem responde pelas dívidas e o destino da empresa em um divórcio ou na sucessão.</p>
+    </div>
+  </div>
+
+  <div class="sendbar">
+    <div class="inner">
+      <button class="send-btn" onclick="enviarRespostas()">Enviar minhas respostas ▸</button>
+      <div class="hint">suas decisões vão direto ao escritório pelo WhatsApp</div>
+    </div>
+  </div>
+
+  <footer>Material privado · Carlesso &amp; Araujo Advogados</footer>
+
+  <script>
+    // adiciona o bloco de decisão (Aprovar/Ajustar/Reprovar + observação) em cada card
+    const PIECES = [
+      "Reel 1 — STJ blinda o sócio", "Reel 2 — Quando holding não vale",
+      "Reel 3 — Imposto na hora da venda", "Reel 4 — Empresa = patrimônio",
+      "Carrossel — ITCMD sem pânico", "Carrossel — Contratos que viram passivo",
+      "Post — Doações fracionadas", "Post — Sociedade entre casal"
+    ];
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, i) => {
+      const label = PIECES[i];
+      const d = document.createElement('div');
+      d.className = 'decide'; d.dataset.label = label;
+      d.innerHTML =
+        '<div class="opts">' +
+        '<label class="ap on"><input type="radio" name="d'+i+'" value="Aprovar" checked>Aprovar</label>' +
+        '<label class="aj"><input type="radio" name="d'+i+'" value="Ajustar">Ajustar</label>' +
+        '<label class="re"><input type="radio" name="d'+i+'" value="Reprovar">Reprovar</label>' +
+        '</div>' +
+        '<input class="note" type="text" placeholder="observação (opcional)">';
+      card.appendChild(d);
+      d.querySelectorAll('.opts label').forEach(lab => {
+        lab.addEventListener('click', () => {
+          d.querySelectorAll('.opts label').forEach(l => l.classList.remove('on'));
+          lab.classList.add('on');
+        });
+      });
+    });
+
+    async function enviarRespostas() {
+      const btn = document.querySelector('.send-btn');
+      const blocks = [...document.querySelectorAll('.decide')];
+      const respostas = blocks.map(b => {
+        const sel = b.querySelector('input[type=radio]:checked');
+        return { peca: b.dataset.label, decisao: sel ? sel.value : '—', obs: b.querySelector('.note').value.trim() };
+      });
+      btn.disabled = true; btn.textContent = 'Enviando…';
+      try {
+        await fetch('https://wa.alinecarlessoadvogada.com.br/aprovacao-aline', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lote: 'v5', respostas })
+        });
+        document.querySelector('.sendbar .inner').innerHTML =
+          '<div style="text-align:center;padding:12px;color:var(--gold);font-family:Cinzel,serif;font-size:19px">✓ Respostas enviadas!</div>' +
+          '<div class="hint">obrigado, Dra. Aline — o escritório já recebeu suas decisões</div>';
+      } catch (e) {
+        btn.disabled = false; btn.textContent = 'Enviar minhas respostas ▸';
+        alert('Não consegui enviar agora. Tente novamente em instantes, por favor.');
+      }
+    }
+  </script>
+</body>
+</html>

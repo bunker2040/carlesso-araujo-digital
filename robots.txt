@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Quando subir pro domínio definitivo, atualizar a linha Sitemap abaixo:
+Sitemap: https://alinecarlesso.com.br/sitemap.xml

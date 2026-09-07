@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carlesso & Araujo Advogados — Ecossistema Digital</title>
+<title>Carlesso & Araujo Advogados — Materiais Essenciais</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,11 +33,11 @@ h1 {
   font-size: 13px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 64px 0 8px;
+  margin: 56px 0 8px;
   font-weight: 700;
 }
 .section-title.go    { color: #6BCB77; }
-.section-title.hold  { color: #CD9443; }
+.section-title.stock { color: #888; }
 .section-desc {
   text-align: center;
   font-size: 13px;
@@ -113,9 +113,20 @@ h2 {
   text-transform: uppercase;
 }
 .tag-go    { background: rgba(107,203,119,0.15); color: #6BCB77; border: 1px solid rgba(107,203,119,0.4); }
-.tag-hold  { background: rgba(205,148,67,0.12); color: #CD9443; border: 1px solid rgba(205,148,67,0.3); }
-.section-hold .card { opacity: 0.78; }
-.section-hold .card:hover { opacity: 1; }
+.tag-stock { background: rgba(136,136,136,0.12); color: #999; border: 1px solid rgba(136,136,136,0.3); }
+.section-stock .card { opacity: 0.72; }
+.section-stock .card:hover { opacity: 1; }
+.note {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px 20px;
+  background: #14100a;
+  border: 1px solid #2a2520;
+  border-radius: 6px;
+  color: #888;
+  font-size: 13px;
+}
+.note a { color: #CD9443; text-decoration: none; }
 footer {
   margin-top: 80px;
   padding-top: 32px;
@@ -125,35 +136,24 @@ footer {
   font-size: 12px;
 }
 footer a { color: #CD9443; text-decoration: none; }
-.alt-link {
-  text-align: center;
-  margin-top: 32px;
-  padding: 14px 20px;
-  background: #14100a;
-  border: 1px solid #2a2520;
-  border-radius: 6px;
-  color: #888;
-  font-size: 13px;
-}
-.alt-link a { color: #CD9443; text-decoration: none; }
 </style>
 </head>
 <body>
 <div class="container">
 <header>
 <img src="logos/logo-aline.jpeg" alt="Carlesso & Araujo Advogados" class="logo">
-<h1>Ecossistema Digital</h1>
-<div class="tagline">Foco em conformidade e estrutura jurídica</div>
+<h1>Materiais Essenciais</h1>
+<div class="tagline">Cartão · Site Escritório · Site Aline · LPs Captação</div>
 </header>
 
 <!-- ============================================================== -->
-<!-- BLOCO 1 — PRONTO PRA IR PRO AR -->
+<!-- BLOCO 1 — EM USO -->
 <!-- ============================================================== -->
-<div class="section-title go">▼ Pronto pra ir pro ar</div>
-<div class="section-desc">Aprovados e prontos pra publicação / divulgação imediata.</div>
+<div class="section-title go">▼ Em uso</div>
+<div class="section-desc">Materiais aprovados rodando ou prontos pra rodar.</div>
 
 <h2>Cartão Digital</h2>
-<div class="grid section-go">
+<div class="grid">
 <a class="card" href="cartao-digital/index.html">
 <span class="tag tag-go">no ar</span>
 <div class="card-title">Dra. Aline Carlesso</div>
@@ -163,27 +163,33 @@ footer a { color: #CD9443; text-decoration: none; }
 </div>
 
 <h2>Site Institucional</h2>
-<div class="grid section-go">
+<div class="grid">
 <a class="card" href="site-escritorio/index.html">
 <span class="tag tag-go">no ar</span>
 <div class="card-title">Carlesso & Araujo — Escritório</div>
 <div class="card-desc">Site institucional do escritório, com as duas sócias e áreas de atuação.</div>
 <div class="card-url">/site-escritorio/</div>
 </a>
+<a class="card" href="site-dra-aline/index.html">
+<span class="tag tag-go">site dela</span>
+<div class="card-title">Site Dra. Aline Carlesso</div>
+<div class="card-desc">Site pessoal da Dra. Aline — Empresarial, Societário, LGPD, Governança.</div>
+<div class="card-url">/site-dra-aline/</div>
+</a>
 </div>
 
-<h2>Landing Pages — Captação</h2>
-<div class="grid section-go">
+<h2>Landing Pages — Captação (atual)</h2>
+<div class="grid">
 <a class="card" href="site-dra-aline/empresarial/index.html">
 <span class="tag tag-go">no ar</span>
 <div class="card-title">LP Direito Empresarial</div>
-<div class="card-desc">"Sua empresa cresce. O jurídico precisa acompanhar." — captação nicho empresarial.</div>
+<div class="card-desc">"Sua empresa cresce. O jurídico precisa acompanhar." — captação para nicho empresarial.</div>
 <div class="card-url">/site-dra-aline/empresarial/</div>
 </a>
 <a class="card" href="site-dra-aline/patrimonial/index.html">
 <span class="tag tag-go">no ar</span>
 <div class="card-title">LP Proteção Patrimonial</div>
-<div class="card-desc">"O que você construiu merece estrutura para durar." — captação nicho patrimonial.</div>
+<div class="card-desc">"O que você construiu merece estrutura para durar." — captação para nicho patrimonial.</div>
 <div class="card-url">/site-dra-aline/patrimonial/</div>
 </a>
 </div>
@@ -191,79 +197,29 @@ footer a { color: #CD9443; text-decoration: none; }
 <div class="section-divider"></div>
 
 <!-- ============================================================== -->
-<!-- BLOCO 2 — AINDA NÃO VAI PRO AR -->
+<!-- BLOCO 2 — ESTOQUE -->
 <!-- ============================================================== -->
-<div class="section-title hold">▼ Ainda não vai pro ar</div>
-<div class="section-desc">Em revisão, esperando aprovação ou em desenvolvimento.</div>
+<div class="section-title stock">▼ Estoque · LPs antigas do bot</div>
+<div class="section-desc">Versões legadas das LPs do fluxo do bot — guardadas como referência ou backup pra reuso.</div>
 
-<h2>Site Dra. Aline Carlesso</h2>
-<div class="grid section-hold">
-<a class="card" href="site-dra-aline/index.html">
-<span class="tag tag-hold">revisão</span>
-<div class="card-title">Site Pessoal Dra. Aline</div>
-<div class="card-desc">Site institucional da Dra. Aline — Empresarial, Societário, LGPD, Governança.</div>
-<div class="card-url">/site-dra-aline/</div>
+<h2>LPs antigas — referência</h2>
+<div class="grid section-stock">
+<a class="card" href="lps-bot-antigas/empresarial.html">
+<span class="tag tag-stock">estoque</span>
+<div class="card-title">LP Empresarial (antiga · bot)</div>
+<div class="card-desc">Versão legada da LP empresarial usada no fluxo antigo do bot.</div>
+<div class="card-url">/lps-bot-antigas/empresarial.html</div>
+</a>
+<a class="card" href="lps-bot-antigas/patrimonial.html">
+<span class="tag tag-stock">estoque</span>
+<div class="card-title">LP Patrimonial (antiga · bot)</div>
+<div class="card-desc">Versão legada da LP patrimonial usada no fluxo antigo do bot.</div>
+<div class="card-url">/lps-bot-antigas/patrimonial.html</div>
 </a>
 </div>
 
-<h2>Subpáginas do Escritório</h2>
-<div class="grid section-hold">
-<a class="card" href="site-escritorio/societario.html">
-<span class="tag tag-hold">revisão</span>
-<div class="card-title">Direito Societário</div>
-<div class="card-desc">Subpágina detalhe — área Societária dentro do site do escritório.</div>
-<div class="card-url">/site-escritorio/societario.html</div>
-</a>
-<a class="card" href="site-escritorio/civil.html">
-<span class="tag tag-hold">revisão</span>
-<div class="card-title">Direito Civil</div>
-<div class="card-desc">Subpágina detalhe — área Cível dentro do site do escritório.</div>
-<div class="card-url">/site-escritorio/civil.html</div>
-</a>
-<a class="card" href="site-escritorio/digital/index.html">
-<span class="tag tag-hold">revisão</span>
-<div class="card-title">Direito Digital</div>
-<div class="card-desc">Subpágina detalhe — Digital, LGPD, Proteção de Dados.</div>
-<div class="card-url">/site-escritorio/digital/</div>
-</a>
-</div>
-
-<h2>Versões em outros idiomas</h2>
-<div class="grid section-hold">
-<a class="card" href="site-escritorio/pt/index.html">
-<span class="tag tag-hold">draft</span>
-<div class="card-title">Versão PT</div>
-<div class="card-desc">Versão alternativa em português — escritório.</div>
-<div class="card-url">/site-escritorio/pt/</div>
-</a>
-<a class="card" href="site-escritorio/en/index.html">
-<span class="tag tag-hold">draft</span>
-<div class="card-title">Versão EN</div>
-<div class="card-desc">Versão em inglês — escritório.</div>
-<div class="card-url">/site-escritorio/en/</div>
-</a>
-<a class="card" href="site-escritorio/es/index.html">
-<span class="tag tag-hold">draft</span>
-<div class="card-title">Versão ES</div>
-<div class="card-desc">Versão em espanhol — escritório.</div>
-<div class="card-url">/site-escritorio/es/</div>
-</a>
-<a class="card" href="site-escritorio/it/index.html">
-<span class="tag tag-hold">draft</span>
-<div class="card-title">Versão IT</div>
-<div class="card-desc">Versão em italiano — escritório.</div>
-<div class="card-url">/site-escritorio/it/</div>
-</a>
-<a class="card" href="site-escritorio/rwa/index.html">
-<span class="tag tag-hold">draft</span>
-<div class="card-title">Versão RWA</div>
-<div class="card-desc">Versão alternativa — escritório.</div>
-<div class="card-url">/site-escritorio/rwa/</div>
-</a>
-</div>
-
-<div class="alt-link">
-Quer ver só os 4 essenciais (cartão + escritório + 2 LPs)? Acesse <a href="index-essencial.html">index-essencial.html</a>.
+<div class="note">
+Quer ver o ecossistema completo (com subpáginas e versões em outros idiomas)? Acesse <a href="index.html">index.html</a>.
 </div>
 
 <footer>
